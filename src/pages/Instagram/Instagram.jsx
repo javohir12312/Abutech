@@ -10,8 +10,6 @@ const LeftMenu = () => {
         </a>
       </div>
 
-      {/* LEFT MENU CODES HERE */}
-      
       <ul id="leftMiddle">
         <li id="home" className="middleMenu">
           <i className="fa-solid fa-house"></i>
@@ -68,7 +66,6 @@ const Story = () => {
         <li style={{ background: 'url(https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg) center/cover' }} className="stories">
           <p>user2</p>
         </li>
-        {/* Add more story items as needed */}
       </ul>
     </div>
   );
@@ -97,7 +94,6 @@ const Post1 = () => {
   );
 };
 
-// Define more posts and components as needed
 
 const RightPanel = () => {
   return (
@@ -124,8 +120,6 @@ const MobileLeftMenu = () => {
         </a>
       </div>
 
-      {/* RESPONSIVE LEFT MENU CODES HERE */}
-      
       <ul className="mLeftMenu">
         <li id="mhome" className="mobileBtns">
           <i className="fa-solid fa-house"></i>
@@ -202,7 +196,6 @@ export default function Instagram() {
       <LeftMenu />
       <Story />
       <Post1 />
-      {/* Add more posts and components here */}
       <RightPanel />
       <MobileLeftMenu />
       <MobileHeader />
