@@ -33,10 +33,6 @@ import Twitter1 from './Twitter1/Twitter1';
               setCurrentIndex(currentIndex - 1);
             }
           };
-    
-          const [responses, setResponses] = useState({});
-        const [currentLink, setCurrentLink] = useState(links[0]);
-    
 
       const [results, setResults] = useState([]);
     
@@ -44,13 +40,14 @@ import Twitter1 from './Twitter1/Twitter1';
 
       useEffect(() => {
         async function fetchResults() {
-          const fetchPromises = links.map(async (site) => {
+          const fetchPromises = links.map(async (url) => {
             try {
-              const response = await fetch(site.link);
+              const response = await fetch(url.url);
+              console.log(response);
               const status = response.status;
-              return { name: site.name, status };
+              return { name: url.name, status };
             } catch (error) {
-              return { name: site.name, status: 'Error' };
+              return { name: url.name, status: error };
             }
           });
     
